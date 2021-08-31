@@ -6,4 +6,11 @@ window.onload = function (){
             })
         })
     }
+    document.getElementById("byeButton").onclick = function (){
+        fetch("/rest/bye").then(function (response){
+            response.text().then(function (text){
+                document.getElementById("outputDiv").innerHTML = text;
+            })
+        })
+    }
 }
